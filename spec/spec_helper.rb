@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 require "todoer"
+require "vcr"
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/vcr_cassetes"
+  config.hook_into :webmock
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -12,4 +18,8 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+end
+
+Todoer.configure do |config|
+  config.todos_host = "http://localhost:3000"
 end

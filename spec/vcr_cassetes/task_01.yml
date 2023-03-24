@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/tasks/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Host:
+      - localhost:3000
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"e8bf8b9da2f012005c956a3fbeb66d89"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9a421fda-94f8-4658-923d-f9a19f9f0f47
+      X-Runtime:
+      - '0.004391'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=1.01, instantiation.active_record;dur=0.07,
+        render_partial.action_view;dur=0.23, render_template.action_view;dur=0.48,
+        process_action.action_controller;dur=2.75
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"titulo":"Limpar a Casas","descricao":"dentro do horario","created_at":"2023-03-21T18:07:19.976Z","updated_at":"2023-03-21T18:07:19.976Z","url":"http://localhost:3000/tasks/1.json"}'
+  recorded_at: Fri, 24 Mar 2023 03:01:30 GMT
+recorded_with: VCR 6.1.0
